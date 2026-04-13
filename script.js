@@ -1,0 +1,1 @@
+const button_icons = document.querySelector(".icon");
