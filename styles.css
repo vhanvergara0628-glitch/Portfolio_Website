@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 1px solidd;
+    font-family: "Pixelify Sans", sans-serif;
+    
+}
+span{
+     font-size: 15px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 1rem;
+   
+}
+
+
+img{
+    height: 5rem;
+}
+
+
+.icons_container{
+    display:grid;
+    grid-template-columns: repeat(3, 120px); /* 3 per row */
+    gap: 20px;
+}
+
+
+.icon_email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.icon{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 5rem;
+ width: 5rem;
+ background-color: rgb(135, 206, 247);
+ border-radius: 5px;
+}
