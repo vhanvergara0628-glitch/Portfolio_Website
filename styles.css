@@ -3,7 +3,7 @@
     padding: 0;
     outline: 1px solidd;
     font-family: "Pixelify Sans", sans-serif;
-    outline: 
+    
 }
 span{
      font-size: 15px;
@@ -59,17 +59,17 @@ background-color: rgb(154, 210, 243);
 }
 
 #music_switch{
- bottom: 37%;
- right: 50%;
+ bottom: 30%;
+ right: 40%;
  background: none;
  border: none;
  position: relative;
 }
 
 #music_switch > img {
-  width: 10rem;
-  height: 10rem;
-  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  position: static;
 }
 
 .modal_one{
