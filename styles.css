@@ -59,17 +59,12 @@ background-color: rgb(154, 210, 243);
 }
 
 #music_switch{
- bottom: 30%;
- right: 40%;
  background: none;
  border: none;
- position: relative;
 }
 
 #music_switch > img {
-  width: 5rem;
-  height: 5rem;
-  position: static;
+
 }
 
 .modal_one{
