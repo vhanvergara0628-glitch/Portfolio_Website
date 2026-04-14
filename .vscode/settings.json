@@ -1,13 +1,4 @@
 {
-  "editor.quickSuggestions": true,
-  "editor.suggest.enabled": true,
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "html": false,
-    "javascript": false,
-    "typescript": false,
-    "css": false
-  }
-}
+    
+    "github.copilot.enable": false
+}   
