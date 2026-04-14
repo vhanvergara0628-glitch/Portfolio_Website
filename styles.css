@@ -14,6 +14,7 @@ body{
     align-items: center;
     height: 100vh;
     gap: 1rem;
+    flex-direction: column;
    
 }
 
@@ -30,7 +31,7 @@ img{
 }
 
 
-.icon_email{
+.icon_one,.icon_two,.icon_three,.icon_four,.icon_five,.icon_six{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,5 +66,9 @@ background-color: rgb(154, 210, 243);
     display:grid;
     grid-template-columns: repeat(2, 120px); 
     gap: 5px;
+
+
 }
 }
+
+
