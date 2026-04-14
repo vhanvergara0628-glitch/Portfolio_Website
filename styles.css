@@ -58,15 +58,32 @@ background-color: rgb(154, 210, 243);
  border: 1px solid rgb(1, 106, 177);
 }
 
-#music_switch{
+#music_switch,#dark_switch{
  background: none;
  border: none;
+ display: flex;
 }
-
+#dark_switch{
+    margin-bottom: 8px;
+}
 #music_switch > img {
-
+   
 }
 
+.nav{
+    background-color: rgba(73, 122, 255, 0.596);
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    height: 3rem;
+    align-items: center;
+    border: 1px solid black;
+    gap:3rem;
+    padding: 6px;
+    margin-bottom: 2rem;
+    
+}
 .modal_one{
     position: fixed;
     top: 0;
@@ -86,6 +103,9 @@ background-color: rgb(154, 210, 243);
     transform:scale(0.95);
     
 }
+#dark_switch:active{
+    transform:scale(0.95);
+}
 
 
 
@@ -97,6 +117,10 @@ background-color: rgb(154, 210, 243);
     grid-template-columns: repeat(2, 120px); 
     gap: 5px;
 
+}
+
+.nav{
+    width: 10rem;
 
 }
 }
