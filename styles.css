@@ -3,7 +3,7 @@
     padding: 0;
     outline: 1px solidd;
     font-family: "Pixelify Sans", sans-serif;
-    
+    outline: 
 }
 span{
      font-size: 15px;
@@ -15,7 +15,7 @@ body{
     height: 100vh;
     gap: 1rem;
     flex-direction: column;
-   
+    position: relative;
 }
 
 
@@ -45,8 +45,6 @@ background-color: rgb(154, 210, 243);
 }
 .icon:active{
     transform:scale(0.95);
-
-    
 }
 .icon{
  display: flex;
@@ -60,6 +58,19 @@ background-color: rgb(154, 210, 243);
  border: 1px solid rgb(1, 106, 177);
 }
 
+#music_switch{
+ bottom: 37%;
+ right: 50%;
+ background: none;
+ border: none;
+ position: relative;
+}
+
+#music_switch > img {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+}
 
 .modal_one{
     position: fixed;
@@ -73,11 +84,13 @@ background-color: rgb(154, 210, 243);
     display: none;
     justify-content: center;
     align-items: center;
-
     z-index: 1; /* ⭐ IMPORTANT */
 }
 
-
+#music_switch:active{
+    transform:scale(0.95);
+    
+}
 
 
 
