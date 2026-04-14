@@ -44,7 +44,8 @@ background-color: rgb(154, 210, 243);
 }
 .icon:active{
     transform:scale(0.95);
-    border: 1px solid rgb(1, 106, 177);
+
+    
 }
 .icon{
  display: flex;
@@ -55,4 +56,14 @@ background-color: rgb(154, 210, 243);
  background-color: rgb(135, 206, 247);
  border-radius: 5px;
  border: none;
+ border: 1px solid rgb(1, 106, 177);
+}
+
+@media (max-width: 600px) { 
+  
+ .icons_container{
+    display:grid;
+    grid-template-columns: repeat(2, 120px); /* 3 per row */
+    gap: 5px;
+}
 }
