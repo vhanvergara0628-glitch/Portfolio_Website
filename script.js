@@ -1,7 +1,7 @@
 // Elements
 const button_icons = document.querySelectorAll(".icon");
 const music_switch = document.querySelector("#music_switch");
-
+const all_buttons = document.querySelectorAll("button");
 const modal_one = document.querySelector(".modal_one");
 const one_modal = document.querySelector("#one_modal");
 const close_modal = document.querySelector("#close_modal");
@@ -25,7 +25,7 @@ close_modal.addEventListener("click", function () {
 });
 
 // Button click sound
-button_icons.forEach(function (click) {
+all_buttons.forEach(function (click) {
   click.addEventListener("click", function () {
     audio.play();
   });
