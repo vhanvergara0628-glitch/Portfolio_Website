@@ -2,7 +2,7 @@
 const button_icons = document.querySelectorAll(".icon");
 const music_switch = document.querySelector("#music_switch");
 const all_buttons = document.querySelectorAll("button");
-
+const body = document.querySelector("body");
 // Icon modals
 const modal_one = document.querySelector(".modal_one");
 const modal_two = document.querySelector(".modal_two");
@@ -25,6 +25,9 @@ const close_modal3 = document.querySelector("#close_modal3");
 const close_modal4 = document.querySelector("#close_modal4");
 const close_modal5 = document.querySelector("#close_modal5");
 const close_modal6 = document.querySelector("#close_modal6");
+
+//darkmode button
+const darkMode = document.querySelector("#dark_switch");
 
 // Audio
 const audio = new Audio("./sfx/click.mp3");
@@ -101,3 +104,17 @@ music_switch.addEventListener("click", function () {
     background_music.pause();
   }
 });
+
+
+//darkMode toggle
+
+darkMode.addEventListener("click",darkToggle);
+
+function darkToggle(){
+  if(body.classList.contains("dark")){
+    body.classList.remove("dark");
+  }
+  else{
+     body.classList.add("dark");
+  }
+}
