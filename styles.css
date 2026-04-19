@@ -152,8 +152,8 @@ a {
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
     border: 5px solid rgb(175, 100, 3);
     border-radius: 1rem;
     background-color: rgba(255, 220, 192, 0.979);
