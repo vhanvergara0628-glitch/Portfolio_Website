@@ -84,7 +84,7 @@ close_modal6.addEventListener("click", function () {
   modal_six.classList.remove("active");
 });
 
-// Button click sound
+// Button click sound 
 all_buttons.forEach(function (click) {
   click.addEventListener("click", function () {
     audio.play();
