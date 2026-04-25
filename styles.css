@@ -18,6 +18,8 @@ span {
 
 a {
     font-size: 1rem;
+    color: rgb(185, 149, 29);
+    text-decoration: none;
 }
 
 
@@ -237,13 +239,13 @@ nav {
 }
 
 .one_container > a {
-    font-size: 0.6rem;
+    font-size: 1rem;
 }
 
 .divider {
-    height: 1px;
-    background-color: black;
-    margin: 1rem 0;
+    height: 0.5px;
+    background-color: rgb(0, 0, 0);
+    margin: 1rem;
     width: 100%;
 }
 
@@ -261,6 +263,10 @@ body.dark .six_container {
     border-color: white;
 }
 
+body.dark .divider {
+    background-color: white;
+}
+
 
 /* ===================== MEDIA QUERY ===================== */
 
@@ -276,10 +282,11 @@ body.dark .six_container {
     }
 
     .one_container > a {
-        font-size: 0.4rem;
+        font-size: 1rem;
     }
 
     .one_container > img {
         width: 90%;
     }
+    
 }
