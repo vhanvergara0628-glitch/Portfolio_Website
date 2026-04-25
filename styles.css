@@ -152,7 +152,7 @@ a {
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 80%;
+    width: 30rem;
     height: 80%;
     border: 5px solid rgb(175, 100, 3);
     border-radius: 1rem;
@@ -171,7 +171,7 @@ a {
 
 .one_container > img, .two_container > img, .three_container > img,
 .four_container > img, .five_container > img, .six_container > img {
-    height: 70%;
+    height: 40%;
     width: 60%;
 }
 
@@ -205,4 +205,35 @@ a {
 
 a{
     font-size: 1rem;
+}
+.two_container {
+    position: relative;
+    overflow: hidden;
+}
+
+.two_container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("./icons/me.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.two_container > img {
+    height: 50%;
+    width: 70%;
+    border-radius: 2rem;
+    object-fit: cover;
+    border: 2px solid white;
+    position: relative;
+    z-index: 1;
+}
+
+.description{
+    background-color: aliceblue;
+    z-index: 2;
 }

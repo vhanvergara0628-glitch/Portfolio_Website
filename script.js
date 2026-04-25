@@ -112,6 +112,7 @@ darkMode.addEventListener("click",darkToggle);
 
 function darkToggle(){
   if(body.classList.contains("dark")){
+    
     body.classList.remove("dark");
   }
   else{
