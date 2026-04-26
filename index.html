@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
@@ -67,17 +69,29 @@
     <div class="one_container">
       <nav>
         <button id="close_modal">&times;</button>
+        <span class="modal_title">contact</span>
       </nav>
-      <p>Hello! I'm glad you're interested in connecting with me. I would be happy to connect and possibly collaborate or share ideas with you. Here are my available contact links:</p>
-      <div class="divider"></div>
 
-    <a href="mailto:vhanvergara0628@gmail.com">vhanvergara0628@gmail.com</a>
+      <div class="modal-inner-content">
+        <h2 class="modal-heading">contact</h2>
+        <p class="modal-sub">Happy to connect, collab, or just say hi! Pick any channel below.</p>
+        <div class="divider"></div>
 
-    <div class="divider"></div>
-   
+        <p class="contact-label">Email</p>
+        <a class="contact-link" href="mailto:vhanvergara0628@gmail.com">
+          <i data-lucide="mail" class="lucide-icon"></i>
+          vhanvergara0628@gmail.com
+        </a>
 
-     <a href="https://www.linkedin.com/in/vhan-vergara-0431a8382" target="_blank"> LinkedIn Profile</a>
-      <div class="divider"></div>
+        <p class="contact-label">LinkedIn</p>
+        <a class="contact-link" href="https://www.linkedin.com/in/vhan-vergara-0431a8382" target="_blank">
+          <i data-lucide="linkedin" class="lucide-icon"></i>
+          linkedin.com/in/vhan-vergara
+        </a>
+
+        <div class="divider"></div>
+        <p class="modal-sub" style="font-size:.72rem; margin-bottom: 16px;">Response time: usually within 24 hours </p>
+      </div>
     </div>
   </div>
 
@@ -86,99 +100,266 @@
     <div class="two_container">
       <nav>
         <button id="close_modal2">&times;</button>
+        <span class="modal_title">about me</span>
       </nav>
 
-      <img src = "icons/me.jpg">
+      <div class="modal-inner-content">
+        <img src="icons/me.jpg" class="about-img">
+        <div class="about-name">Vhan Vergara</div>
+        <div class="about-role">Aspiring Software Developer</div>
 
-     <h1>I'am Vhan Vergara</h1>
-   <p>
-I’m Vhan Vergara, an aspiring software developer focused on building clean, useful digital products.<br>
-I work with front-end and back-end basics, and I enjoy turning ideas into simple, working projects that solve real problems.<br><br>
+        <div class="divider"></div>
 
-I have experience with C#, web development, and I’ve also explored mobile apps and Unity game development.<br>
-I like learning how systems work together and how design improves user experience.<br><br>
+        <p class="about-body">
+          I focus on building clean, useful digital products. I work with front-end and back-end basics,
+          and I enjoy turning ideas into simple, working projects that solve real problems.
+        </p>
+        <p class="about-body">
+          I have experience with C#, web development, and I've also explored mobile apps and Unity game development.
+          I like learning how systems work together and how design improves user experience.
+        </p>
+        <p class="about-body">
+          Outside coding, I enjoy editing, creating art, and creative problem-solving.
+          My goal is to keep improving and eventually build my own useful products people actually enjoy using.
+        </p>
 
-Outside coding, I enjoy editing and creating art, along with creative problem-solving.<br>
-My goal is to keep improving and eventually build my own useful products that people actually enjoy using.
-</p>
+        <div class="divider"></div>
+        <div class="about-section-title">
+          <i data-lucide="briefcase" class="lucide-icon-sm"></i> Work Experience
+        </div>
 
-  <h1>Work Experience</h1>
-
-    <p>
-My first job was as a Sales Clerk at ACE Hardware Philippines when I was 19, where I developed customer service and communication skills.<br><br>
-In 2024, I started working remotely at Keycom as a Video Editor and was later promoted to Senior Video Editor, leading a small team and managing video production for social media and ads.<br><br>
-At the same time, I worked as a Freelance Video Editor, producing content for Melai Cantiveros and US entertainment channels, handling clients and delivering projects independently.<br><br>
-Now, I’m seeking opportunities related to my main career goal: software development.
-</p>
+        <p class="about-body">
+          <strong>Sales Clerk</strong> — ACE Hardware Philippines (age 19)<br>
+          Developed customer service and communication skills.
+        </p>
+        <p class="about-body">
+          <strong>Video Editor → Senior Video Editor</strong> — Keycom (2024–present, remote)<br>
+          Led a small team, managed video production for social media and ads.
+        </p>
+        <p class="about-body">
+          <strong>Freelance Video Editor</strong> — Self-employed<br>
+          Produced content for Melai Cantiveros and US entertainment channels.
+        </p>
+        <p class="about-body" style="margin-bottom: 16px;">
+          Currently seeking opportunities in <strong>software development</strong>. 
+        </p>
+      </div>
     </div>
   </div>
- 
+
   <!-- Modal 3: Projects -->
   <div class="modal_three">
     <div class="three_container">
       <nav>
         <button id="close_modal3">&times;</button>
+        <span class="modal_title">projects</span>
       </nav>
+
+      <div class="modal-inner-content">
+        <h2 class="modal-heading">projects</h2>
+        <p class="modal-sub">Things I've built and shipped.</p>
+        <div class="divider"></div>
+
+        <div class="project-card">
+          <div class="project-title">
+            <i data-lucide="monitor" class="lucide-icon-sm"></i> Portfolio Website (this one!)
+          </div>
+          <p class="project-desc">A pixel-art inspired personal portfolio with dark mode, modals, and retro aesthetics. Built from scratch with vanilla HTML, CSS, and JS.</p>
+          <div class="project-tags">
+            <span class="tag accent">HTML</span>
+            <span class="tag accent">CSS</span>
+            <span class="tag blue">JS</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">
+            <i data-lucide="gamepad-2" class="lucide-icon-sm"></i> Unity Mini-Game
+          </div>
+          <p class="project-desc">A small 2D game built using Unity and C# exploring game development fundamentals — player movement, collisions, basic UI.</p>
+          <div class="project-tags">
+            <span class="tag">Unity</span>
+            <span class="tag blue">C#</span>
+            <span class="tag">2D</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">
+            <i data-lucide="scissors" class="lucide-icon-sm"></i> Video Production – Keycom
+          </div>
+          <p class="project-desc">Led production of short-form social media videos and ad creatives for brand clients. Managed a team of editors and maintained quality standards.</p>
+          <div class="project-tags">
+            <span class="tag">Premiere Pro</span>
+            <span class="tag">CapCut</span>
+            <span class="tag accent">Leadership</span>
+          </div>
+        </div>
+
+        <p class="modal-sub" style="font-size:.72rem; margin-bottom: 16px;">More projects coming soon — currently building</p>
+      </div>
     </div>
   </div>
- 
+
   <!-- Modal 4: Skills -->
   <div class="modal_four">
     <div class="four_container">
       <nav>
         <button id="close_modal4">&times;</button>
+        <span class="modal_title">skills</span>
       </nav>
 
-      <h2>Technical</h2>
-       <div class="divider"></div>
-      <div class = "technical">
-        <p>HTML • CSS • Tailwind • Responsive Design • Git • GitHub • Basic JavaScript • Unity C# Basics</p>
-      </div>
-       <div class="divider"></div>
+      <div class="modal-inner-content">
+        <h2 class="modal-heading">skills</h2>
+        <div class="divider"></div>
 
-       <h2>Creative</h2>
-       <div class="divider"></div>
-      <div class = "technical">
-        <p>UI/UX • Graphic Design • Video Editing • Content Creation. Digital/Traditional Art</p>
-      </div>
-       <div class="divider"></div>
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <i data-lucide="code-2" class="lucide-icon-sm"></i> Technical
+          </div>
+          <div class="skill-chips">
+            <span class="chip">HTML</span><span class="chip">CSS</span>
+            <span class="chip">Tailwind</span><span class="chip">Responsive Design</span>
+            <span class="chip">Git</span><span class="chip">GitHub</span>
+            <span class="chip">JavaScript</span><span class="chip">Unity C#</span>
+          </div>
+        </div>
+        <div class="divider"></div>
 
-       
-       <h2>Tools</h2>
-       <div class="divider"></div>
-      <div class = "technical">
-        <p>VS Code • GitHub Desktop • Figma • Canva • CapCut • Aseprite • Blender • Premiere Pro</p>
-      </div>
-       <div class="divider"></div>
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <i data-lucide="palette" class="lucide-icon-sm"></i> Creative
+          </div>
+          <div class="skill-chips">
+            <span class="chip">UI/UX</span><span class="chip">Graphic Design</span>
+            <span class="chip">Video Editing</span><span class="chip">Content Creation</span>
+            <span class="chip">Digital Art</span><span class="chip">Traditional Art</span>
+          </div>
+        </div>
+        <div class="divider"></div>
 
-        <h2>Professional</h2>
-       <div class="divider"></div>
-      <div class = "technical">
-        <p>Problem Solving • Team Leadership • Creative Direction • Fast Learner • Attention to Detail • Deadline Management • Collaboration with Clients/Teams</p>
-      </div>
-       <div class="divider"></div>
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <i data-lucide="wrench" class="lucide-icon-sm"></i> Tools
+          </div>
+          <div class="skill-chips">
+            <span class="chip">VS Code</span><span class="chip">GitHub Desktop</span>
+            <span class="chip">Figma</span><span class="chip">Canva</span>
+            <span class="chip">CapCut</span><span class="chip">Aseprite</span>
+            <span class="chip">Blender</span><span class="chip">Premiere Pro</span>
+          </div>
+        </div>
+        <div class="divider"></div>
 
+        <div class="skill-group" style="margin-bottom: 16px;">
+          <div class="skill-group-title">
+            <i data-lucide="handshake" class="lucide-icon-sm"></i> Professional
+          </div>
+          <div class="skill-chips">
+            <span class="chip">Problem Solving</span><span class="chip">Team Leadership</span>
+            <span class="chip">Creative Direction</span><span class="chip">Fast Learner</span>
+            <span class="chip">Attention to Detail</span><span class="chip">Deadline Management</span>
+            <span class="chip">Client Collaboration</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
- 
+
   <!-- Modal 5: Creatives -->
   <div class="modal_five">
     <div class="five_container">
       <nav>
         <button id="close_modal5">&times;</button>
+        <span class="modal_title">creatives</span>
       </nav>
+
+      <div class="modal-inner-content">
+        <h2 class="modal-heading">creatives</h2>
+        <p class="modal-sub">A peek into my creative work — art, video, and design.</p>
+        <div class="divider"></div>
+
+        <div class="creative-grid">
+          <div class="creative-card">
+            <i data-lucide="clapperboard" class="lucide-creative-icon"></i>
+            <span>Video Editing</span>
+          </div>
+          <div class="creative-card">
+            <i data-lucide="brush" class="lucide-creative-icon"></i>
+            <span>Digital Art</span>
+          </div>
+          <div class="creative-card">
+            <i data-lucide="pencil" class="lucide-creative-icon"></i>
+            <span>Traditional Art</span>
+          </div>
+          <div class="creative-card">
+            <i data-lucide="layout-dashboard" class="lucide-creative-icon"></i>
+            <span>UI Design</span>
+          </div>
+          <div class="creative-card">
+            <i data-lucide="image" class="lucide-creative-icon"></i>
+            <span>Thumbnails</span>
+          </div>
+          <div class="creative-card">
+            <i data-lucide="grid-2x2" class="lucide-creative-icon"></i>
+            <span>Pixel Art</span>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+        <p class="modal-sub" style="font-size:.72rem; margin-bottom: 16px;">Portfolio / gallery link coming soon</p>
+      </div>
     </div>
   </div>
- 
+
   <!-- Modal 6: Stuff -->
   <div class="modal_six">
     <div class="six_container">
       <nav>
         <button id="close_modal6">&times;</button>
+        <span class="modal_title">stuff</span>
       </nav>
+
+      <div class="modal-inner-content">
+        <h2 class="modal-heading">stuff</h2>
+        <p class="modal-sub">Random things about me outside of work.</p>
+        <div class="divider"></div>
+
+        <div class="stuff-item">
+          <i data-lucide="gamepad-2" class="lucide-stuff-icon"></i>
+          <div>I enjoy exploring game design and indie games — especially anything with pixel art or interesting mechanics.</div>
+        </div>
+        <div class="stuff-item">
+          <i data-lucide="music" class="lucide-stuff-icon"></i>
+          <div>Music is always on while I work. Lo-fi, OPM, and sometimes video game soundtracks.</div>
+        </div>
+        <div class="stuff-item">
+          <i data-lucide="telescope" class="lucide-stuff-icon"></i>
+          <div>I'm fascinated by astronomy and the study of life — the cosmos, how it all began, and what's out there.</div>
+        </div>
+        <div class="stuff-item">
+          <i data-lucide="dna" class="lucide-stuff-icon"></i>
+          <div>The study of life — biology, evolution, how living things work — genuinely captivates me.</div>
+        </div>
+        <div class="stuff-item">
+          <i data-lucide="book-open" class="lucide-stuff-icon"></i>
+          <div>Currently learning more about backend development and slowly diving into system design.</div>
+        </div>
+        <div class="stuff-item" style="margin-bottom: 16px;">
+          <i data-lucide="sprout" class="lucide-stuff-icon"></i>
+          <div>I believe in slow, consistent growth over shortcuts — in code and in life.</div>
+        </div>
+      </div>
     </div>
   </div>
 
+  <div class="bottom-bar">
+    © 2026 Vhan Vergara. All rights reserved.
+  </div>
+
   <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

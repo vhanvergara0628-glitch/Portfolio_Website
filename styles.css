@@ -60,14 +60,42 @@ img {
     height: 5rem;
 }
 
-.one_container > img,
-.two_container > img,
-.three_container > img,
-.four_container > img,
-.five_container > img,
-.six_container > img {
-    height: 40%;
-    width: 60%;
+
+/* ===================== LUCIDE ICONS ===================== */
+
+.lucide-icon {
+    width: 18px;
+    height: 18px;
+    stroke-width: 1.8;
+    flex-shrink: 0;
+}
+
+.lucide-icon-sm {
+    width: 14px;
+    height: 14px;
+    stroke-width: 1.8;
+    vertical-align: middle;
+    margin-right: 4px;
+    flex-shrink: 0;
+}
+
+.lucide-creative-icon {
+    width: 28px;
+    height: 28px;
+    stroke-width: 1.5;
+}
+
+.lucide-stuff-icon {
+    width: 20px;
+    height: 20px;
+    stroke-width: 1.8;
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: rgb(185, 149, 29);
+}
+
+body.dark .lucide-stuff-icon {
+    color: rgb(185, 149, 29);
 }
 
 
@@ -76,12 +104,21 @@ img {
 nav {
     background-color: rgb(92, 92, 92);
     display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
     width: 100%;
+    padding: 4px 10px;
     position: sticky;
-    top:0%
+    top: 0;
+    z-index: 10;
+}
+
+.modal_title {
+    font-size: 12px;
+    color: rgb(200, 200, 200);
+    letter-spacing: 1px;
 }
 
 
@@ -93,14 +130,13 @@ nav {
 #close_modal4,
 #close_modal5,
 #close_modal6 {
-    position: static;
-    align-self: flex-start;
     background: none;
     border: none;
-    margin-left: 10px;
-    margin-top: 5px;
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: white;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 2px;
 }
 
 #close_modal:active,
@@ -218,39 +254,26 @@ nav {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    width: 80%;
-    height: 80%;
+    width: 55%;
+    max-width: 480px;
+    max-height: 65vh;
     background-color: white;
     border: 1px solid black;
+    border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
-.one_container > h1, .two_container > h1, .three_container > h1,
-.four_container > h1, .five_container > h1, .six_container > h1 {
-    font-size: 1rem;
-    margin-top: 1rem;
-}
 
-.one_container p,
-.two_container p, .three_container p,
-.four_container p, .five_container p, .six_container p {
-    align-self: flex-start;
-    padding: 1rem;
-    margin-top: 1rem;
-    text-align: center;
-}
+/* ===================== MODAL INNER CONTENT WRAPPER ===================== */
 
-.one_container > a {
-    font-size: 1rem;
-}
-
-.divider {
-    height: 0.5px;
-    background-color: rgb(0, 0, 0);
-    margin: 1rem;
+.modal-inner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
+    padding: 0 0 4px 0;
 }
 
 
@@ -262,85 +285,355 @@ body.dark .three_container,
 body.dark .four_container,
 body.dark .five_container,
 body.dark .six_container {
-    background-color: black;
+    background-color: #111;
     color: white;
     border-color: white;
 }
 
 body.dark .divider {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-body.dark .technical{
-      outline: 1px solid rgb(255, 255, 255);
+body.dark .chip {
+    background-color: #1a1a1a;
+    border-color: rgba(255, 255, 255, 0.25);
+    color: white;
 }
 
-body.dark .two_container img{
-    
-    border: 2px solid rgb(255, 255, 255);
+body.dark .project-card,
+body.dark .stuff-item,
+body.dark .contact-link,
+body.dark .creative-card {
+    background-color: #1a1a1a;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ccc;
 }
 
-body.dark .two_container p{
-
-  outline: 1px solid white;
+body.dark .contact-link {
+    color: rgb(185, 149, 29);
 }
 
-body.dark .two_container h1{
-     outline: 1px solid rgb(255, 255, 255);
+body.dark .modal-heading {
+    color: white;
+}
+
+body.dark .project-title {
+    color: white;
+}
+
+body.dark .lucide-creative-icon {
+    color: #ccc;
+}
+
+body.dark .creative-card:hover .lucide-creative-icon {
+    color: rgb(185, 149, 29);
 }
 
 
+/* ===================== DIVIDER ===================== */
 
-
-.technical{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.divider {
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+    margin: 10px 0;
     width: 100%;
-    gap: 40px ;
-     color: rgb(185, 149, 29);
-     outline: 1px solid black;
 }
 
 
-.technical p{
-    
-margin: 0;
+/* ===================== MODAL INNER CONTENT ===================== */
+
+.modal-heading {
+    font-family: "Pixelify Sans", monospace;
+    font-size: 1rem;
+    letter-spacing: .08em;
+    color: black;
+    margin: 14px 16px 6px;
+    align-self: flex-start;
 }
 
-.four_container h2{
-    margin-top: 20px;
+.modal-sub {
+    font-size: .78rem;
+    color: rgb(100, 100, 100);
+    line-height: 1.6;
+    margin: 0 16px 12px;
+    align-self: flex-start;
 }
 
-.two_container img{
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 20%;
-    margin-top: 30px;
+
+/* ── Contact ── */
+
+.contact-label {
+    font-size: .65rem;
+    letter-spacing: .1em;
+    color: rgb(120, 120, 120);
+    margin: 0 16px 6px;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: rgb(185, 149, 29);
+    font-size: .82rem;
+    padding: 10px 14px;
     border: 1px solid black;
-    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    margin: 0 16px 14px;
+    align-self: flex-start;
+    width: calc(100% - 32px);
+    transition: border-color 0.15s;
+    box-sizing: border-box;
 }
 
-.two_container p {
+.contact-link:hover {
+    border-color: rgb(185, 149, 29);
+}
+
+
+/* ── About Me ── */
+
+.about-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid black;
+    object-fit: cover;
+    margin: 16px auto 10px;
     align-self: center;
-    text-align: justify;
-    margin: 1rem;
-    outline: 1px solid black;
-    width: 50%;
-    
 }
 
-.two_container h1{
-    font-size: 2rem;
+.about-name {
+    font-family: "Pixelify Sans", monospace;
+    font-size: 1.3rem;
+    text-align: center;
     color: gold;
-     outline: 1px solid rgb(0, 0, 0);
-     padding: 10px;
+    outline: 1px solid black;
+    padding: 4px 14px;
+    margin: 0 16px 8px;
+    align-self: flex-start;
+    width: calc(100% - 32px);
+    box-sizing: border-box;
+}
+
+.about-role {
+    font-size: .7rem;
+    letter-spacing: .15em;
+    color: rgb(90, 140, 238);
+    text-align: center;
+    font-family: "Pixelify Sans", monospace;
+    text-transform: uppercase;
+    margin: 0 16px 10px;
+    align-self: flex-start;
+}
+
+.about-body {
+    font-size: .8rem;
+    line-height: 1.7;
+    color: rgb(80, 80, 80);
+    margin: 0 16px 10px;
+    align-self: flex-start;
+    outline: 1px solid black;
+    padding: 10px 12px;
+    width: calc(100% - 32px);
+    box-sizing: border-box;
+}
+
+body.dark .about-body {
+    color: #bbb;
+    outline-color: rgba(255,255,255,0.2);
+}
+
+body.dark .about-name {
+    outline-color: rgba(255,255,255,0.3);
+}
+
+.about-section-title {
+    font-family: "Pixelify Sans", monospace;
+    font-size: .9rem;
+    color: rgb(185, 149, 29);
+    letter-spacing: .08em;
+    margin: 6px 16px 8px;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 
-/* ===================== MEDIA QUERY ===================== make sure nakahuli  */
+/* ── Projects ── */
+
+.project-card {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 12px 14px;
+    margin: 0 16px 12px;
+    background: #f9f9f9;
+    width: calc(100% - 32px);
+    box-sizing: border-box;
+    transition: border-color 0.15s;
+}
+
+.project-card:hover {
+    border-color: rgb(185, 149, 29);
+}
+
+.project-title {
+    font-family: "Pixelify Sans", monospace;
+    font-size: .88rem;
+    margin-bottom: 6px;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.project-desc {
+    font-size: .75rem;
+    color: rgb(100, 100, 100);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: .62rem;
+    font-family: "Pixelify Sans", monospace;
+    padding: 2px 7px;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: rgb(80, 80, 80);
+    letter-spacing: .05em;
+}
+
+.tag.accent { border-color: rgb(185, 149, 29); color: rgb(185, 149, 29); }
+.tag.blue   { border-color: rgb(90, 140, 238); color: rgb(90, 140, 238); }
+
+
+/* ── Skills ── */
+
+.skill-group {
+    margin: 0 16px 6px;
+    width: calc(100% - 32px);
+    align-self: flex-start;
+    box-sizing: border-box;
+}
+
+.skill-group-title {
+    font-family: "Pixelify Sans", monospace;
+    font-size: .85rem;
+    letter-spacing: .08em;
+    color: rgb(185, 149, 29);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.chip {
+    font-size: .7rem;
+    font-family: "Pixelify Sans", monospace;
+    padding: 3px 9px;
+    background: #f5f5f5;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+}
+
+
+/* ── Creatives ── */
+
+.creative-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 0 16px 12px;
+    width: calc(100% - 32px);
+    box-sizing: border-box;
+}
+
+.creative-card {
+    aspect-ratio: 1;
+    background: #f9f9f9;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-family: "Pixelify Sans", monospace;
+    font-size: .68rem;
+    color: rgb(100, 100, 100);
+    letter-spacing: .08em;
+    transition: border-color .15s, color .15s;
+    cursor: default;
+}
+
+.creative-card:hover {
+    border-color: rgb(185, 149, 29);
+    color: rgb(185, 149, 29);
+}
+
+.creative-card:hover .lucide-creative-icon {
+    color: rgb(185, 149, 29);
+}
+
+.lucide-creative-icon {
+    width: 28px;
+    height: 28px;
+    stroke-width: 1.5;
+    color: rgb(100, 100, 100);
+    transition: color .15s;
+}
+
+
+/* ── Stuff ── */
+
+.stuff-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0 16px 10px;
+    background: #f9f9f9;
+    font-size: .78rem;
+    line-height: 1.6;
+    color: rgb(80, 80, 80);
+    width: calc(100% - 32px);
+    box-sizing: border-box;
+}
+
+
+/* ===================== BOTTOM BAR ===================== */
+
+.bottom-bar {
+    color: gray;
+    text-align: center;
+    padding: 1rem;
+    font-size: 10px;
+    font-style: normal;
+}
+
+
+/* ===================== MEDIA QUERY ===================== */
+
 @media (max-width: 600px) {
 
     .icons_container {
@@ -352,34 +645,10 @@ margin: 0;
         width: 10rem;
     }
 
-    .one_container > a {
-        font-size: 1rem;
+    .one_container,
+    .two_container, .three_container,
+    .four_container, .five_container, .six_container {
+        width: 92%;
+        max-height: 72vh;
     }
-
-    .one_container > img {
-        width: 90%;
-    }
-
-    .two_container p{
-
- text-align: justify;
-  text-justify: inter-word;
-  font-weight: 100;
-  margin: 2rem;
-  outline: 1px solid rgb(0, 0, 0);
-}
-
-.two_container h1 {
-    font-size: 20px;
-   
-}
-
- .one_container {
-        height: 50%;
-    }
-.two_container p {
-
-    width: 80%;
-    
-}
 }
