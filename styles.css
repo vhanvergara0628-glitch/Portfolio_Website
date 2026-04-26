@@ -64,18 +64,30 @@ img {
 /* ===================== LUCIDE ICONS ===================== */
 
 .lucide-icon {
+    display: inline-block;
     width: 18px;
     height: 18px;
     stroke-width: 1.8;
     flex-shrink: 0;
+    vertical-align: middle;
 }
 
 .lucide-icon-sm {
+    display: inline-block;
     width: 14px;
     height: 14px;
     stroke-width: 1.8;
     vertical-align: middle;
-    margin-right: 4px;
+    margin-right: 2px;
+    flex-shrink: 0;
+}
+
+/* Ensure inline SVGs used as icons size correctly */
+a svg.lucide-icon,
+a svg.lucide-icon-sm,
+div svg.lucide-icon-sm,
+p svg.lucide-icon-sm {
+    display: inline-block;
     flex-shrink: 0;
 }
 
@@ -464,7 +476,42 @@ body.dark .about-name {
 }
 
 
-/* ── Projects ── */
+/* ── CV Download Button ── */
+
+.cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: "Pixelify Sans", monospace;
+    font-size: .78rem;
+    letter-spacing: .05em;
+    color: white;
+    background-color: rgb(185, 149, 29);
+    border: 1px solid rgb(150, 120, 20);
+    border-radius: 5px;
+    padding: 7px 14px;
+    margin: 0 16px 12px;
+    text-decoration: none;
+    transition: background-color 0.15s, transform 0.1s;
+    cursor: pointer;
+}
+
+.cv-download-btn:hover {
+    background-color: rgb(160, 128, 20);
+    color: white;
+}
+
+.cv-download-btn:active {
+    transform: scale(0.97);
+}
+
+body.dark .cv-download-btn {
+    background-color: rgb(185, 149, 29);
+    border-color: rgb(150, 120, 20);
+    color: white;
+}
+
+
 
 .project-card {
     border: 1px solid black;
