@@ -498,6 +498,55 @@ body.dark .about-name {
     margin-bottom: 10px;
 }
 
+.project-links {
+    margin-bottom: 8px;
+}
+
+.project-gh-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: .7rem;
+    font-family: "Pixelify Sans", monospace;
+    color: rgb(90, 140, 238);
+    border: 1px solid rgb(90, 140, 238);
+    border-radius: 3px;
+    padding: 3px 8px;
+    text-decoration: none;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.project-gh-link:hover {
+    background-color: rgb(90, 140, 238);
+    color: white;
+}
+
+body.dark .project-gh-link {
+    color: rgb(120, 170, 255);
+    border-color: rgb(120, 170, 255);
+}
+
+body.dark .project-gh-link:hover {
+    background-color: rgb(90, 140, 238);
+    color: white;
+}
+
+.project-badge {
+    font-size: .55rem;
+    font-family: "Pixelify Sans", monospace;
+    padding: 2px 6px;
+    border-radius: 3px;
+    letter-spacing: .08em;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.project-badge.wip {
+    background-color: rgba(185, 149, 29, 0.15);
+    border: 1px solid rgb(185, 149, 29);
+    color: rgb(185, 149, 29);
+}
+
 .project-tags {
     display: flex;
     gap: 5px;
