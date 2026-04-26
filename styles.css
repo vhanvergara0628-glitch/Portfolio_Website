@@ -80,6 +80,8 @@ nav {
     align-items: start;
     flex-direction: column;
     width: 100%;
+    position: sticky;
+    top:0%
 }
 
 
@@ -221,6 +223,8 @@ nav {
     background-color: white;
     border: 1px solid black;
     transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .one_container > h1, .two_container > h1, .three_container > h1,
@@ -289,4 +293,25 @@ body.dark .divider {
         width: 90%;
     }
     
+}
+
+.technical{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 40px ;
+     color: rgb(185, 149, 29);
+     outline: 1px solid black;
+}
+
+
+.technical p{
+    
+margin: 0;
+}
+
+.four_container h2{
+    margin-top: 20px;
 }
