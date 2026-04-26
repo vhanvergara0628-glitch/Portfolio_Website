@@ -288,7 +288,7 @@ body.dark .two_container p{
 body.dark .two_container h1{
      outline: 1px solid rgb(255, 255, 255);
 }
-/* ===================== MEDIA QUERY ===================== */
+
 
 
 
@@ -328,7 +328,7 @@ margin: 0;
     text-align: justify;
     margin: 1rem;
     outline: 1px solid black;
-   
+    width: 50%;
     
 }
 
@@ -339,6 +339,8 @@ margin: 0;
      padding: 10px;
 }
 
+
+/* ===================== MEDIA QUERY ===================== make sure nakahuli  */
 @media (max-width: 600px) {
 
     .icons_container {
@@ -375,5 +377,9 @@ margin: 0;
  .one_container {
         height: 50%;
     }
+.two_container p {
 
+    width: 80%;
+    
+}
 }
